@@ -8,7 +8,7 @@ Tried almost all the pdf extraction techniquies
 
 and few others which will help to fetch the table data from pdfs 
 
-But tall these work work with the pdf that we are going to work because the 
+But all these wont work with the pdf that we are going to work because the 
 data not structured and may actuall table row has inline rows which making this difficult
 
 So pypdf2 which suggested my Dr grant works as it extracts the text words from the pdf. but in semi structured and with few hidden clues to make it structured
