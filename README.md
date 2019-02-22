@@ -60,7 +60,7 @@ step 5 : created table in it with 9 cols as mention in the docs
         );
 step 6 : inserted the dataframe into sqlite by excluding the index 
 
-step 7 : returned the random row from sqllite table
+step 7 : returns the random row from sqllite table by seperated þ columns
 
 Assumptions:
 value data in more lines with is taken " \n" and "-\n"
