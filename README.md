@@ -1,3 +1,5 @@
+Akhila Podupuganti
+
 Tried almost all the pdf extraction techniquies 
 
 - pdftotest
@@ -5,11 +7,12 @@ Tried almost all the pdf extraction techniquies
 - camelot-py
 - tabula-py
 - ghostscript
+- pdfminer
 
 and few others which will help to fetch the table data from pdfs 
 
-But all these wont work with the pdf that we are going to work because the 
-data not structured and may actuall table row has inline rows which making this difficult
+But all these won't work with the pdf that we are going to work because the 
+data not structured and many actual table row has inline rows which making this difficult to use other libraries
 
 So pypdf2 which suggested my Dr grant works as it extracts the text words from the pdf. but in semi structured and with few hidden clues to make it structured
 
@@ -45,16 +48,16 @@ step 3 : the list of list cleaned and structured data converted to dataframe usi
 step 4 : created sqlite connection
 step 5 : created table in it with 9 cols as mention in the docs
         CREATE TABLE arrests (
-    arrest_time TEXT,
-    case_number TEXT,
-    arrest_location TEXT,
-    offense TEXT,
-    arrestee_name TEXT,
-    arrestee_birthday TEXT,
-    arrestee_address TEXT,
-    status TEXT,
-    officer TEXT
-);
+        arrest_time TEXT,
+        case_number TEXT,
+        arrest_location TEXT,
+        offense TEXT,
+        arrestee_name TEXT,
+        arrestee_birthday TEXT,
+        arrestee_address TEXT,
+        status TEXT,
+        officer TEXT
+        );
 step 6 : inserted the dataframe into sqlite by excluding the index 
 
 step 7 : returned the random row from sqllite table
@@ -76,6 +79,16 @@ Test files:
     testing on seleted downloaded file example.pdf 
     checking if the data is fetched exactly as in the pdf by some selected values
     and count of rows and cols as well.
+
+Directions to run this project:
+    main.py - Just run it by giving url "python main.py --arrests <url>" which returns the random row of sqlite table seperated by þ
+    test files - in cs5293p19-project0 folder with "pipenv run python setup.py test"
+    total test cases are 11 including the genralised pdf testing and selected pdf testing
+
+References:
+    http://www.sqlitetutorial.net/sqlite-python/creating-database/
+    https://stackoverflow.com
+
 
 
 
